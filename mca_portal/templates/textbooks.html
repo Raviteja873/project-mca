@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Semester {{ semester }} Textbooks</h2>
+<p>Logged in as: <strong>{{ user }}</strong></p>
+{% if books %}
+  <ul class="list-group">
+    {% for book in books %}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>{{ book }}</span>
+        <span>
+          <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('download', semester=semester, filename=book) }}">Download</a>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <div class="alert alert-info">No textbooks uploaded for this semester yet.</div>
+{% endif %}
+{% endblock %}

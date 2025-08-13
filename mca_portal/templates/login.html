@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title text-center mb-3">MCA Portal Login</h3>
+        <form method="post">
+          <div class="mb-3">
+            <label for="email" class="form-label">College Email</label>
+            <input id="email" name="email" type="email" class="form-control" placeholder="example@gvpce.ac.in" required>
+            <div class="form-text">Only <strong>@gvpce.ac.in</strong> accounts are allowed.</div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+    <p class="text-center mt-3 text-muted small">Use your institutional email (e.g., 324203320008@gvpce.ac.in)</p>
+  </div>
+</div>
+{% endblock %}
